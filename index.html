@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Voting App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 50px;
+        }
+        .block {
+            width: 200px;
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        #block1 {
+            background-color: #ff5733;
+        }
+        #block2 {
+            background-color:#348d2c;
+        }
+        #block3 {
+            background-color: #74992e;
+        }
+        #block4 {
+            background-color: #ff33a3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Voting App</h1>
+    <p1>suggest me name 😊</p1>
+    <div class="container">
+            <div id="block1" class="block" onclick="vote('Priya')">Priya</div>
+            <div id="block2" class="block" onclick="vote('Priyanka')">Priyanka</div>
+            <div id="block3" class="block" onclick="vote('Piyu')">Piyu</div>
+            <div id="block4" class="block" onclick="vote('Piya')">Piya</div>
+    </div>
+    <div id="result" style="margin-top: 20px; font-size: 20px;"></div>
+    <script>
+        function vote(block) {
+            document.getElementById('result').innerText = 'You voted for ' + block + '!';
+        }
+    </script>
+</body>
+</html>
+
